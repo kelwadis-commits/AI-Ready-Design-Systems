@@ -1,0 +1,20 @@
+{
+  "name": "ai-ready-design-systems",
+  "version": "0.3.0",
+  "description": "A white-label brand and design system plugin. Constructs, manages, and generates on-brand assets across two tiers \u2014 marketing and product \u2014 from a structured brand strategy workflow.",
+  "author": {
+    "name": "Kelwadis Butler"
+  },
+  "homepage": "https://github.com/kelwadis-commits/AI-Ready-Design-Systems",
+  "repository": "https://github.com/kelwadis-commits/AI-Ready-Design-Systems",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "brand",
+    "design-tokens",
+    "figma",
+    "white-label",
+    "ux-copy",
+    "brand-strategy"
+  ]
+}

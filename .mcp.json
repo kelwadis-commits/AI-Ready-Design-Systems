@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "Figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server", "--stdio"],
+      "env": {
+        "FIGMA_API_TOKEN": "${FIGMA_API_TOKEN}"
+      }
+    }
+  }
+}
