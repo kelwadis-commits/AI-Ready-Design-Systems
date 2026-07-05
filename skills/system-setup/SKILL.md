@@ -99,6 +99,7 @@ These tools can accelerate early visual decisions before tokens are committed:
 
 - **[cssgradient.io](https://cssgradient.io)** — Visual gradient builder. Use when the brand palette includes gradient fills or background treatments. Generate the gradient visually, then extract the CSS values as primitive token inputs for `color.gradient.*` tokens. Saves guessing linear/radial stop values.
 - **[coolshap.es](https://coolshap.es)** — 100+ open-source abstract SVG shapes with grainy gradient fills. Use when the brand aesthetic includes generative or organic background elements. Available as SVG, PNG, React component, or Figma file — drop directly into the style guide or asset library.
+- **[storyset.com](https://storyset.com)** — Free, customizable, animatable illustrations. Use when the brand's imagery style leans illustration-forward (see the `Imagery style` field in the brand extraction report) — recolor to the brand palette before use. See `asset-generation` Step 1.5 for the full imagery decision framework (photography vs. illustration vs. iconography).
 
 ## Step 2 — Recommend a base design system
 
@@ -130,7 +131,7 @@ Once the base system is confirmed, generate the configuration object. This is th
 {
   "project": "~~project name",
   "brand_tier": {
-    "icon_library": "google-material-symbols",
+    "icon_library": "heroicons",
     "icon_library_override": null,
     "font_system": "google-fonts",
     "font_system_override": null,
@@ -210,7 +211,7 @@ After saving the file, provide the user a link to open it directly.
 
 When generating any system output, call out the four programmable plug points:
 
-1. **Icon library** — default: Google Material Symbols. Swap: any licensed icon set (Phosphor, Streamline, custom SVG).
+1. **Icon library** — default: Heroicons (MIT-licensed, pairs directly with Tailwind CSS — see `integrations`). Swap: any licensed icon set (Material Symbols, Phosphor, Streamline, custom SVG).
 2. **Font system** — default: Google Fonts. Swap: any licensed type foundry (Klim, Grilli Type, Adobe Fonts).
 3. **Asset library** — default: Unsplash API. Swap: any DAM (Bynder, Canto, Brandfolder, client-owned).
 4. **Data viz library** — default: Recharts (web), Victory Native (mobile). Swap: D3.js, Chart.js, or enterprise viz system.
@@ -229,6 +230,7 @@ When generating any system output, call out the four programmable plug points:
 
 | Version | Date | Author | Changes |
 |---|---|---|---|
+| 1.4 | 2026-07-01 | Kelwadis Butler | Changed default icon library from Google Material Symbols to Heroicons (config block + plug points) to align with the plugin's Tailwind CSS default. Added storyset.com as a utility tool for visual direction in Step 1. |
 | 1.3 | 2026-06-24 | Kelwadis Butler | Added Step 0 — URL-to-brand extraction. Auto-extracts color, typography, voice, tone, product type, and pricing signals from a live URL via web_fetch. Feeds directly into Step 1 brand brief. Updated description frontmatter with URL trigger phrases. |
 | 1.2 | 2026-06-24 | Kelwadis Butler | Added Blank (useblank.design) as design-tool-first base system option in Step 2. Added cssgradient.io and coolshap.es as utility tools for visual direction in Step 1. |
 | 1.1 | 2026-06-23 | Kelwadis Butler | Added optional Refero visual direction block in Step 1. Added `refero_style_profile` field to plugin config block. Updated Step 4 to derive seed tokens from Refero style profile when available. |

@@ -2,6 +2,8 @@
 
 Full library of wireframe options for every template category. Each entry includes 2–4 layout options and the component-to-token mapping for brand injection.
 
+**Default icon library:** Heroicons (see `system-setup` plug points and `asset-generation` Step 1.5 — Icon Primitives). Every "icon" reference below assumes Heroicons unless the user has selected a different icon library override.
+
 ---
 
 ## Product / UX templates
@@ -168,7 +170,7 @@ Best for: First-use moments, encouraging action
 Complexity: Low
 
 **OPTION B — Icon + action (minimal)**
-Layout: Centered. Icon (from token icon library). Headline. CTA inline or below.
+Layout: Centered. Icon (from Heroicons — default icon library). Headline. CTA inline or below.
 Key sections: Icon (48px) → Headline → CTA button
 Best for: Dense UI, secondary sections, list empty states
 Complexity: Low

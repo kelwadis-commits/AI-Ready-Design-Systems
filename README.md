@@ -87,7 +87,7 @@ This plugin is designed to be deployed per client. Each client gets their own pl
 | Plug point | Default | How to change |
 |---|---|---|
 | Base design system | Radix + shadcn/ui (web) | Update `product_tier.base_design_system` in config |
-| Icon library | Google Material Symbols | Update `brand_tier.icon_library_override` in config |
+| Icon library | Heroicons | Update `brand_tier.icon_library_override` in config |
 | Font system | Google Fonts | Update `brand_tier.font_system_override` in config |
 | Asset / image library | Unsplash | Update `brand_tier.asset_library_override` in config |
 | Data viz library | Recharts (web) | Update `product_tier.data_viz_override` in config |
@@ -100,7 +100,7 @@ When starting a new client, generate this block via `system-setup` and keep it i
 {
   "project": "Client Name",
   "brand_tier": {
-    "icon_library": "google-material-symbols",
+    "icon_library": "heroicons",
     "icon_library_override": null,
     "font_system": "google-fonts",
     "font_system_override": null,

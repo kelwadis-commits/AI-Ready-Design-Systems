@@ -18,7 +18,7 @@ The Figma MCP is configured in `.mcp.json`. To activate it:
 |---|---|---|---|
 | Asset / image library | Unsplash | `~~asset library` | Bynder, Canto, Brandfolder, any DAM |
 | Font system | Google Fonts | `~~font system` | Adobe Fonts, Klim, Grilli Type, licensed foundry |
-| Icon library | Google Material Symbols | `~~icon library` | Phosphor, Streamline, Lucide, custom SVG set |
+| Icon library | Heroicons | `~~icon library` | Material Symbols, Phosphor, Streamline, Lucide, custom SVG set |
 | Data viz library | Recharts (web) / Victory Native (mobile) | `~~data viz` | D3.js, Chart.js, Highcharts, enterprise viz system |
 
 ## How to customize for a client

@@ -84,9 +84,17 @@ Present the following registry menu and ask the user to select one. If the user 
 | 15 | **Animated / Framer Motion** | Lukacho UI | ui.lukacho.com | High-craft animated components (dropdowns, marquees, grid backgrounds) — small library, intentional selection |
 | 16 | **PRO / WebGL / Shader-level** | AnimMasterLib | animmasterlib.dev | 300 PRO animated components with video previews; includes WebGL shaders, scroll animations, hero sections — premium tier |
 
-### Shape & Asset Primitives
+### Asset Primitives
 
-For screens requiring background shapes, blobs, or abstract fill elements, use **[coolshap.es](https://coolshap.es)** — 100+ open-source abstract SVG shapes with grainy gradient fills, available as SVG code, PNG, React component, or Figma file. Reference these in Step 5 (Imagery) when the art direction note calls for abstract or generative backgrounds.
+Beyond full components, screens often need standalone shapes, icons, illustrations, or footer patterns. Use these sources directly — reference them in Step 5 (Imagery) when the art direction note calls for a specific primitive type.
+
+**Shapes** — **[coolshap.es](https://coolshap.es)** — 100+ open-source abstract SVG shapes with grainy gradient fills, available as SVG code, PNG, React component, or Figma file. Use for background shapes, blobs, or abstract fill elements.
+
+**Icons** — **[Heroicons](https://heroicons.com)** — the plugin's default icon library (see `system-setup` plug points). 300+ free, MIT-licensed SVG icons built by the Tailwind CSS team, in Outline (24px), Solid (20px), and Mini (16px) variants. Available as raw SVG, or via tree-shakeable React/Vue packages. Use for any functional icon placement — empty states, dashboard KPIs, nav items, feature lists. Pairs directly with the Tailwind CSS integration (see `integrations` skill) since both come from Tailwind Labs.
+
+**Illustrations** — **[Storyset](https://storyset.com)** — free, customizable, animatable illustrations (SVG/PNG/GIF/MP4 export) across multiple style families (Rafiki, Bro, Amico, Pana). Recolor to match brand tokens before use. Use for onboarding, empty states, and marketing moments that need a conceptual or life-moment illustration rather than a literal photograph — see the Imagery decision framework in Step 5.
+
+**Footer patterns** — **[footer.design](https://www.footer.design)** — a curated gallery of website footer layouts, sortable by type and style. Use as a structural reference specifically for the footer section of landing pages and marketing templates, alongside the broader Step 2 template sources.
 
 **Rules:**
 - Record the selected registry in the session context as `component_registry`. Carry it forward to all subsequent steps.
@@ -170,7 +178,18 @@ Once an option is selected, inject the brand system across four dimensions. Stat
 
 **Copy** — generate placeholder copy for every text node using the brand voice from the plugin config. Apply copy mechanic rules (sentence case, 20 words max for UI labels, active voice). Label each text node with the copy type (headline, CTA, helper text, etc.).
 
-**Imagery** — if the template includes an image placeholder, write an art direction note: subject, composition, color treatment, and photography style derived from the brand strategy.
+**Imagery** — if the template includes an image placeholder, write an art direction note: subject, composition, color treatment, and image type derived from the brand strategy. Use the decision framework below to choose between photography, illustration, iconography, and real UI screenshots — it's discretionary, not a hard gate, so state the reasoning in one line alongside the art direction note.
+
+**Photography vs. illustration vs. iconography — a discretionary rule:**
+
+The deciding question is *how literal does this moment need to be?* Position on the marketing-to-functional spectrum is the strongest signal, but it isn't the only one:
+
+- **Photography** — default for early, acquisition-facing touchpoints: lead gen, paid/organic social, landing page heroes, anywhere the brand needs to read as sophisticated and the goal is emotional identification with a real-life moment. Source via the brand's asset library plug point (default: Unsplash — see `system-setup`).
+- **Illustration** — use where a concept needs simplifying or humanizing without being literal. This shows up in two places, not one: (1) as a bridge from marketing into functional territory — a "life moment" that's easier to illustrate than photograph — and (2) inside functional flows for light-hearted or low-stakes moments, like onboarding metaphors, empty states, and step-by-step setup. Source via Storyset (Step 1.5 Asset Primitives), recolored to brand tokens.
+- **Real UI screenshots** — use when the goal is proving the product actually works — "beauty shots" of the interface itself, not a stand-in graphic. This applies mid-funnel, when a user is evaluating mechanics rather than being drawn in emotionally or completing a task.
+- **Iconography** — reserve for the most compressed, functional, or data-facing moments: measured variables, settings rows, dashboard KPIs, dense transactional UI. This is the least literal register — use consistent iconography (default: Heroicons) rather than illustration once a moment is purely about function or data, not feeling.
+
+When in doubt, err toward matching the surrounding step's register rather than mixing photography and illustration within the same flow — consistency within a flow matters more than any single screen's choice.
 
 **Spacing and layout** — apply the 8pt grid using spacing tokens. Document the padding, gap, and margin tokens for every auto-layout frame.
 
@@ -323,6 +342,7 @@ TOKEN BINDINGS
 
 | Version | Date | Author | Changes |
 |---|---|---|---|
+| 1.3 | 2026-07-01 | Kelwadis Butler | Expanded Shape & Asset Primitives into Asset Primitives (Step 1.5): added Icons (Heroicons — now the plugin default), Illustrations (Storyset), Footer patterns (footer.design). Added photography vs. illustration vs. iconography decision framework to Step 5 Imagery, based on marketing-to-functional touchpoint positioning. |
 | 1.2 | 2026-06-24 | Kelwadis Butler | Fixed registry #11 URL from ruiverse.io → uiverse.io. Added registry #15 Lukacho UI (animated Framer Motion). Added registry #16 AnimMasterLib (PRO/WebGL tier). Added Shape & Asset Primitives section (coolshap.es). Added Sprrrint as Step 2 template source. |
 | 1.1 | 2026-06-23 | Kelwadis Butler | Added Step 1.5 — Component Registry layer with 14-library aesthetic selector. Added prompt-based registry mode (VibeUI, MotionSites, VibecodeComponents). Added `component_registry` and `component_registry_url` to JSON meta block. Added registry rule to never-break list. |
 | 1.0 | 2026-05-01 | Kelwadis Butler | Initial release. User story capture, flow selection, template sourcing (Uizard, Figma Community, Envato), brand injection, Claude Design JSON output, Figma MCP integration. |
