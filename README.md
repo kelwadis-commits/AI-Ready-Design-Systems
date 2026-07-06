@@ -3,7 +3,7 @@
 A white-label Claude plugin that acts as a Brand & Design System Architect — setting up two-tier design systems, generating DTCG-format design tokens, producing tone-aware UX copy, and auditing assets for brand compliance. Built to be deployed once and customized per client.
 
 **Author:** Kelwadis Butler  
-**Version:** 0.2.0  
+**Version:** 0.4.0  
 **License:** MIT  
 **Repository:** https://github.com/kelwadis-commits/AI-Ready-Design-Systems
 
@@ -21,7 +21,7 @@ Both tiers draw from the same brand strategy and token source of truth. The plug
 
 ---
 
-## Skills (v0.1.0)
+## Skills
 
 ### system-setup
 Sets up a design system from scratch. Recommends a base component library, generates a DTCG-format token file, and produces a Figma variable spec.
