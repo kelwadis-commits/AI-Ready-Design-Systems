@@ -83,6 +83,7 @@ Present the following registry menu and ask the user to select one. If the user 
 | 14 | **AI prompt-generated (components)** | VibecodeComponents | vibecodecomponents.com | Component-level AI prompts for Lovable and Cursor projects |
 | 15 | **Animated / Framer Motion** | Lukacho UI | ui.lukacho.com | High-craft animated components (dropdowns, marquees, grid backgrounds) — small library, intentional selection |
 | 16 | **PRO / WebGL / Shader-level** | AnimMasterLib | animmasterlib.dev | 300 PRO animated components with video previews; includes WebGL shaders, scroll animations, hero sections — premium tier |
+| 17 | **Loading / Spinner-specific** | LDRS | uiball.com/ldrs | 44 free, customizable loader/spinner types (HTML/CSS/SVG); React, Vue, Svelte, Solid, and web components. Use for animated spinners specifically — pair with Dot Matrix (#10) when a project also needs skeleton/placeholder patterns. |
 
 ### Asset Primitives
 
@@ -90,11 +91,13 @@ Beyond full components, screens often need standalone shapes, icons, illustratio
 
 **Shapes** — **[coolshap.es](https://coolshap.es)** — 100+ open-source abstract SVG shapes with grainy gradient fills, available as SVG code, PNG, React component, or Figma file. Use for background shapes, blobs, or abstract fill elements.
 
-**Icons** — **[Heroicons](https://heroicons.com)** — the plugin's default icon library (see `system-setup` plug points). 300+ free, MIT-licensed SVG icons built by the Tailwind CSS team, in Outline (24px), Solid (20px), and Mini (16px) variants. Available as raw SVG, or via tree-shakeable React/Vue packages. Use for any functional icon placement — empty states, dashboard KPIs, nav items, feature lists. Pairs directly with the Tailwind CSS integration (see `integrations` skill) since both come from Tailwind Labs.
+**Icons** — **[Heroicons](https://heroicons.com)** — the plugin's default icon library (see `system-setup` plug points). 300+ free, MIT-licensed SVG icons built by the Tailwind CSS team, in Outline (24px), Solid (20px), and Mini (16px) variants. Available as raw SVG, or via tree-shakeable React/Vue packages. Use for any functional icon placement — empty states, dashboard KPIs, nav items, feature lists. Pairs directly with the Tailwind CSS integration (see `integrations` skill) since both come from Tailwind Labs. If a project needs broader icon coverage than Heroicons' ~300 icons, swap to **[Tabler Icons](https://tabler-icons.io)** — 6,100+ free, MIT-licensed SVG icons on a consistent 24x24 grid with 2px stroke, available for React, Vue, Solid, and Figma. Use Tabler when the icon vocabulary needs to be broad (e.g., dense admin/enterprise UI) rather than tightly Tailwind-coupled.
 
 **Illustrations** — **[Storyset](https://storyset.com)** — free, customizable, animatable illustrations (SVG/PNG/GIF/MP4 export) across multiple style families (Rafiki, Bro, Amico, Pana). Recolor to match brand tokens before use. Use for onboarding, empty states, and marketing moments that need a conceptual or life-moment illustration rather than a literal photograph — see the Imagery decision framework in Step 5.
 
 **Footer patterns** — **[footer.design](https://www.footer.design)** — a curated gallery of website footer layouts, sortable by type and style. Use as a structural reference specifically for the footer section of landing pages and marketing templates, alongside the broader Step 2 template sources.
+
+**Grid & layout patterns** — **[Bento Grids](https://bentogrids.com)** — a curated gallery of "bento grid" layouts (the Japanese bento-box-inspired grid of varied-size rectangular blocks), filterable by light/dark mode. Use as a structural reference for Dashboard, Landing page, and Profile flows that call for a modular, asymmetrical card-grid layout rather than a conventional stacked or sidebar layout.
 
 **Rules:**
 - Record the selected registry in the session context as `component_registry`. Carry it forward to all subsequent steps.
@@ -114,6 +117,7 @@ Once the flow is confirmed, search for real template examples from the following
 2. **Figma Community** — `https://www.figma.com/community/` — search "[flow name] template" or "[flow name] UI kit"
 3. **Sprrrint** — `https://sprrrint.com` — 300+ Figma and Framer components and templates; free tier available; strong for landing page and marketing flows
 4. **Envato Elements** — search `https://elements.envato.com/` for "[flow name] UI template"
+5. **Awwwards** — `https://www.awwwards.com/websites/` — jury-curated, award-winning full sites. Use only for **Landing page / Marketing** flows when the user wants trend-setting, best-of-the-web direction rather than a conventional template — this source skews toward bold, unconventional design over reusable structure.
 
 **What to extract from each source:**
 - Template name and URL
@@ -329,7 +333,7 @@ TOKEN BINDINGS
 
 - Never output a JSON or spec before the user has confirmed their user story (Step 0).
 - Never skip the component registry selection (Step 1.5) — always confirm which library backs the output.
-- Never skip template sourcing (Step 2) — always fetch at least one of the three sources.
+- Never skip template sourcing (Step 2) — always fetch at least one of the five sources.
 - Never present fewer than 2 wireframe options in Step 4.
 - Never hardcode a hex value, font name, or spacing number in the JSON without a "token" or "tokenSource" reference.
 - Every layer in the JSON must have a descriptive "name" — no unnamed frames.
@@ -342,6 +346,7 @@ TOKEN BINDINGS
 
 | Version | Date | Author | Changes |
 |---|---|---|---|
+| 1.4 | 2026-07-01 | Kelwadis Butler | Added registry #17 LDRS (loading spinners) to Component Registry. Added Grid & layout patterns (Bento Grids) to Asset Primitives. Added Tabler Icons as a named swap option in the Icons primitive entry. Added Awwwards as a 5th Step 2 template source, scoped to Landing page/Marketing flows. Updated never-break rule to reflect 5 Step 2 sources. |
 | 1.3 | 2026-07-01 | Kelwadis Butler | Expanded Shape & Asset Primitives into Asset Primitives (Step 1.5): added Icons (Heroicons — now the plugin default), Illustrations (Storyset), Footer patterns (footer.design). Added photography vs. illustration vs. iconography decision framework to Step 5 Imagery, based on marketing-to-functional touchpoint positioning. |
 | 1.2 | 2026-06-24 | Kelwadis Butler | Fixed registry #11 URL from ruiverse.io → uiverse.io. Added registry #15 Lukacho UI (animated Framer Motion). Added registry #16 AnimMasterLib (PRO/WebGL tier). Added Shape & Asset Primitives section (coolshap.es). Added Sprrrint as Step 2 template source. |
 | 1.1 | 2026-06-23 | Kelwadis Butler | Added Step 1.5 — Component Registry layer with 14-library aesthetic selector. Added prompt-based registry mode (VibeUI, MotionSites, VibecodeComponents). Added `component_registry` and `component_registry_url` to JSON meta block. Added registry rule to never-break list. |

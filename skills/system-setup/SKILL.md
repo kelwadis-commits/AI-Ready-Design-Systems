@@ -211,7 +211,7 @@ After saving the file, provide the user a link to open it directly.
 
 When generating any system output, call out the four programmable plug points:
 
-1. **Icon library** — default: Heroicons (MIT-licensed, pairs directly with Tailwind CSS — see `integrations`). Swap: any licensed icon set (Material Symbols, Phosphor, Streamline, custom SVG).
+1. **Icon library** — default: Heroicons (MIT-licensed, pairs directly with Tailwind CSS — see `integrations`). Swap: any licensed icon set (Tabler Icons for broader ~6,100-icon coverage, Material Symbols, Phosphor, Streamline, custom SVG).
 2. **Font system** — default: Google Fonts. Swap: any licensed type foundry (Klim, Grilli Type, Adobe Fonts).
 3. **Asset library** — default: Unsplash API. Swap: any DAM (Bynder, Canto, Brandfolder, client-owned).
 4. **Data viz library** — default: Recharts (web), Victory Native (mobile). Swap: D3.js, Chart.js, or enterprise viz system.
@@ -230,6 +230,7 @@ When generating any system output, call out the four programmable plug points:
 
 | Version | Date | Author | Changes |
 |---|---|---|---|
+| 1.5 | 2026-07-01 | Kelwadis Butler | Added Tabler Icons as a named swap option in the icon library plug point, for projects that need broader icon coverage than Heroicons' ~300 icons. |
 | 1.4 | 2026-07-01 | Kelwadis Butler | Changed default icon library from Google Material Symbols to Heroicons (config block + plug points) to align with the plugin's Tailwind CSS default. Added storyset.com as a utility tool for visual direction in Step 1. |
 | 1.3 | 2026-06-24 | Kelwadis Butler | Added Step 0 — URL-to-brand extraction. Auto-extracts color, typography, voice, tone, product type, and pricing signals from a live URL via web_fetch. Feeds directly into Step 1 brand brief. Updated description frontmatter with URL trigger phrases. |
 | 1.2 | 2026-06-24 | Kelwadis Butler | Added Blank (useblank.design) as design-tool-first base system option in Step 2. Added cssgradient.io and coolshap.es as utility tools for visual direction in Step 1. |
