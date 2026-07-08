@@ -58,6 +58,8 @@ D. "Your AI design systems partner — for every engagement, every client."
 
 ### Positioning statement (internal use)
 
+Full vision and persona detail: `01_PRD.md`. Compressed for GTM use:
+
 > AI-Ready Design Systems is a Claude plugin for independent designers and AI-native founders who need enterprise-quality brand and design system infrastructure without enterprise headcount. Unlike generic AI prompts or manual design system setups, ARDS generates structured, token-based, auditable design systems from a brand brief — and keeps them consistent across two tiers: marketing and product.
 
 ### One-liner for socials / bio

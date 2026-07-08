@@ -9,43 +9,11 @@ description: >
 
 # Virtual Product Manager — AI-Ready Design Systems
 
-## Product Vision
+## Product Vision & Personas
 
-**One-sentence:** Give any designer or founder a senior-level brand and design system architect — on demand, for every client, without hiring one.
+Canonical, detailed version lives in **`01_PRD.md`** (repo root) — don't restate it here, read it there. Persona validation status (these are currently hypotheses, not researched fact) is tracked in **`07_USER_RESEARCH.md`**.
 
-**Expanded:** AI-Ready Design Systems is the intelligence layer between brand strategy and shipped product. It ensures that every token, every line of copy, and every audited asset traces back to a coherent brand decision — not a guess.
-
----
-
-## Who This Is For
-
-### Primary Persona — The Independent Designer
-
-- Freelancers and small design studios (1–5 people)
-- Runs multiple client engagements simultaneously
-- Needs to produce enterprise-quality design system outputs without enterprise-sized headcount
-- Currently does this manually, inconsistently, and at significant time cost
-
-**Pain:** Every new client engagement means rebuilding the same infrastructure from scratch — tokens, copy voice, audit rubric — in a slightly different way.
-
-**Gain:** Install once, configure per client, deploy consistently. The plugin does the system thinking so they can focus on creative decisions.
-
-### Secondary Persona — The AI-Native Founder
-
-- Solo or tiny team building a product with AI tooling (Lovable, Cursor, v0)
-- Has a product idea but no brand infrastructure
-- Needs a design system that will hold up as the product grows
-- Currently ships with generic defaults (Tailwind blue, system fonts, placeholder copy)
-
-**Pain:** Ships a product that looks like a template. Can't articulate a brand. Design system debt accumulates fast.
-
-**Gain:** Start with a real design system from day one. Tokens, voice, token architecture — all generated and auditable from a brand brief.
-
-### Tertiary Persona — The Design Manager at a Growing Startup
-
-- Managing 2–4 designers across marketing and product
-- No dedicated design systems engineer yet
-- Needs governance tooling to keep outputs consistent without a full-time systems role
+One-line reminder for in-conversation use: give any designer or founder a senior-level brand and design system architect — on demand, for every client, without hiring one. Primary persona: the Independent Designer. Secondary: the AI-Native Founder. Tertiary: the Design Manager at a growing startup.
 
 ---
 
@@ -72,40 +40,17 @@ description: >
 
 ## Core Differentiators (defend these always)
 
-1. **Two-tier architecture** — Marketing and product design systems governed from the same token source of truth. No other AI tool does this explicitly.
+1. **Two-tier architecture** — Marketing and product design systems governed from the same token source of truth. No other AI tool does this explicitly. (Decision record: `DECISION_LOG.md` D-001.)
 2. **Brand strategy upstream** — The system is anchored to brand intent, not just visual preferences. Token choices are traceable to strategic decisions.
-3. **White-label, per-client deployment** — Not a single design system. A system for building design systems, deployable per engagement.
+3. **White-label, per-client deployment** — Not a single design system. A system for building design systems, deployable per engagement. (Decision record: `DECISION_LOG.md` D-003.)
 4. **Audit intelligence** — The system can evaluate whether any piece of design, copy, or token output is compliant with the brand it set up. Closed loop.
 5. **Copy mechanics integration** — Voice, tone, reading level, and UX copy are first-class citizens of the design system, not an afterthought.
 
 ---
 
-## Feature Roadmap (PM-prioritized)
+## Feature Roadmap
 
-### Shipped (v0.2.0)
-- system-setup: base system recommendation + DTCG token generation + Figma variable spec + HTML style guide
-- copy-generation: tone-aware UX and marketing copy
-- token-update: targeted token edits with alias preservation
-- system-audit: brand compliance review with severity classification
-- asset-generation: wireframe selection → brand token injection → Figma plugin script
-- integrations: integration partner documentation and handoff guides
-- launch-playbook: GitHub readiness, launch strategy, community building
-- virtual-pm: product vision, personas, roadmap, OKRs
-
-### Next (v0.3.0 — target: 60 days post-launch)
-- **brand-strategy skill** — 9-layer brand strategy workflow built into the plugin
-- **Tokens Studio export** — `.json` compatible with Tokens Studio for Figma
-- **Lovable handoff template** — shadcn config + Tailwind theme for direct Lovable use
-
-### Later (v0.4.0+)
-- **multi-client workspace** — Manage multiple client config blocks in one session
-- **GitHub Actions integration** — Token compliance check wired as a CI step
-- **Storybook export** — Component documentation stubs from the design system config
-
-### Parking Lot (evaluate after traction)
-- Figma plugin companion (write tokens directly to Figma variables via API)
-- Webflow variable export
-- Figma-to-token reverse engineering
+Canonical roadmap (shipped / next / later / parking lot, with sourcing for every item) lives in **`06_ROADMAP.md`**. Full backlog detail with priority/complexity/dependencies lives in **`IDEAS_BACKLOG.md`**. Use the PM Standing Questions below when triaging what moves from backlog into an actual roadmap commitment — don't re-list roadmap items here.
 
 ---
 

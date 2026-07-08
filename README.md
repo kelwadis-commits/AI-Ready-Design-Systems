@@ -3,9 +3,11 @@
 A white-label Claude plugin that acts as a Brand & Design System Architect — setting up two-tier design systems, generating DTCG-format design tokens, producing tone-aware UX copy, and auditing assets for brand compliance. Built to be deployed once and customized per client.
 
 **Author:** Kelwadis Butler  
-**Version:** 0.4.0  
+**Version:** 0.5.0  
 **License:** MIT  
 **Repository:** https://github.com/kelwadis-commits/AI-Ready-Design-Systems
+
+**Project governance & documentation:** This repo now includes a full documentation set at root — `01_PRD.md` (vision/personas/scope), `02_INFORMATION_ARCHITECTURE.md`, `03_DATABASE.md` (data/config model), `04_DESIGN_SYSTEM.md`, `05_PROMPT_ARCHITECTURE.md` (skill pipelines), `06_ROADMAP.md`, `07_USER_RESEARCH.md`, `DECISION_LOG.md`, `IDEAS_BACKLOG.md`, plus `00_CLAUDE_INSTRUCTIONS.md` and `CLAUDE_PLAYBOOK_INSTRUCTIONS.md` governing how contributors (human or Claude) should work in this repo. Start there before making changes.
 
 ---
 
@@ -145,6 +147,7 @@ ai-ready-design-systems/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       ├── base-system-comparison.md
+│   │       ├── style-guide-template.md
 │   │       └── token-architecture.md
 │   ├── copy-generation/
 │   │   ├── SKILL.md
@@ -154,13 +157,28 @@ ai-ready-design-systems/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── alias-rules.md
-│   └── system-audit/
-│       ├── SKILL.md
-│       └── references/
-│           └── audit-rubric.md
+│   ├── system-audit/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── audit-rubric.md
+│   ├── asset-generation/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── figma-plugin-generator.md
+│   │       └── template-catalog.md
+│   ├── integrations/
+│   │   └── SKILL.md
+│   ├── launch-playbook/
+│   │   └── SKILL.md
+│   └── virtual-pm/
+│       └── SKILL.md
 ├── .mcp.json
 ├── CONNECTORS.md
-└── README.md
+├── README.md
+└── 00_CLAUDE_INSTRUCTIONS.md, 01_PRD.md, 02_INFORMATION_ARCHITECTURE.md,
+    03_DATABASE.md, 04_DESIGN_SYSTEM.md, 05_PROMPT_ARCHITECTURE.md,
+    06_ROADMAP.md, 07_USER_RESEARCH.md, CLAUDE_PLAYBOOK_INSTRUCTIONS.md,
+    DECISION_LOG.md, IDEAS_BACKLOG.md   ← project governance/documentation set
 ```
 
 ---
